@@ -11,10 +11,7 @@ RUN \
     npm \
     jq \
     && npm install --force \
-      eufy-security-client-3.1.2-beta.tgz \
-    && npm install --force \
-      eufy-security-ws-1.9.2-beta.tgz
-#     "eufy-security-ws@${EUFY_SECURITY_WS_VERSION}"
+    "@tmaxxrox97/eufy-security-ws@1.9.2-beta"
 
 COPY run.sh /
 RUN chmod a+x /run.sh
