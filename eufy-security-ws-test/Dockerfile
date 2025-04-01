@@ -2,11 +2,12 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 
 ARG EUFY_SECURITY_WS_VERSION
+ARG NODE_AUTH_TOKEN
 
 WORKDIR /usr/src/app
 RUN \
     set -x \
-    && echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN }" > ~/.npmrc \
+    && echo "//npm.pkg.github.com/:_authToken=${NODE_AUTH_TOKEN}" > ~/.npmrc \
     && apk add --no-cache\
     nodejs \
     npm \
