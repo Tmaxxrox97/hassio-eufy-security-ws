@@ -1,4 +1,4 @@
-vname: "Publish"
+name: "Publish"
 
 on:
   push:
