@@ -23,5 +23,7 @@ jobs:
             --all \
             --target eufy-security-ws-test \
             --docker-hub tmaxxrox97
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #env:
         #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
