@@ -11,7 +11,7 @@ RUN \
     npm \
     jq \
     git \
-    ssh \
+    openssh-client \
     && npm install --force "https://github.com/tmaxxrox97/eufy-security-ws@1.9.2-beta" 
 
 COPY run.sh /
