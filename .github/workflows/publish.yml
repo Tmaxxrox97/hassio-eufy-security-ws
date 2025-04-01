@@ -1,4 +1,4 @@
-name: "Publish"
+vname: "Publish"
 
 on:
   push:
@@ -23,7 +23,7 @@ jobs:
             --all \
             --target eufy-security-ws-test \
             --docker-hub tmaxxrox97 \
-          secrets:
-            NODE_AUTH_TOKEN=${{ secrets.GITHUB_TOKEN }}
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #env:
         #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
