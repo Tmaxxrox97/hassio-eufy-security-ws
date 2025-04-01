@@ -6,7 +6,7 @@ ARG EUFY_SECURITY_WS_VERSION
 WORKDIR /usr/src/app
 RUN \
     set -x \
-    && apk add --no-cache \
+    && apk add --no-cache git\
     nodejs \
     npm \
     jq \
