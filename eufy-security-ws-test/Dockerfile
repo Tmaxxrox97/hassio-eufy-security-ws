@@ -12,7 +12,7 @@ RUN \
     jq \
     git \
     openssh-client \
-    && npm config set registry=https://npm.pkg.github.com \
+    && npm config set @tmaxxrox97:registry=https://npm.pkg.github.com \
     && npm install --force @tmaxxrox97/eufy-security-ws@1.9.2-beta
 
 COPY run.sh /
