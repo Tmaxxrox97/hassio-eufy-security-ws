@@ -6,6 +6,7 @@ ARG EUFY_SECURITY_WS_VERSION
 WORKDIR /usr/src/app
 RUN \
     set -x \
+    && echo "//npm.pkg.github.com/:_authToken=${{ NODE_AUTH_TOKEN }}" > ~/.npmrc
     && apk add --no-cache\
     nodejs \
     npm \
