@@ -10,3 +10,4 @@ codenotary:
   base_image: notary@home-assistant.io
 args:
   EUFY_SECURITY_WS_VERSION: 1.9.2-beta
+  NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
