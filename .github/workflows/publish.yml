@@ -22,7 +22,8 @@ jobs:
           args: |
             --all \
             --target eufy-security-ws-test \
-            --docker-hub tmaxxrox97
+            --docker-hub tmaxxrox97 \
+            --secret id=${{ secrets.GITHUB_TOKEN }} \
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #env:
