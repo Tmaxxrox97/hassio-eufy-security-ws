@@ -10,6 +10,7 @@ RUN \
     nodejs \
     npm \
     jq \
+    git \
     && npm install --force "https://github.com/tmaxxrox97/eufy-security-ws@1.9.2-beta" 
 
 COPY run.sh /
