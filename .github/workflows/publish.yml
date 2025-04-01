@@ -21,7 +21,7 @@ jobs:
         with:
           args: |
             --all \
-            --target eufy-security-ws \
+            --target eufy-security-ws-test \
             --docker-hub tmaxxrox97
         #env:
         #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
