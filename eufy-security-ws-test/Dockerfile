@@ -6,12 +6,11 @@ ARG EUFY_SECURITY_WS_VERSION
 WORKDIR /usr/src/app
 RUN \
     set -x \
-    && apk add --no-cache git\
+    && apk add --no-cache\
     nodejs \
     npm \
     jq \
-    && npm install --force \
-    "@tmaxxrox97/eufy-security-ws@1.9.2-beta"
+    && npm install --force "https://github.com/tmaxxrox97/eufy-security-ws@1.9.2-beta" 
 
 COPY run.sh /
 RUN chmod a+x /run.sh
