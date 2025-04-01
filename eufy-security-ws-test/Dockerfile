@@ -12,7 +12,6 @@ RUN \
     jq \
     git \
     openssh-client \
-    && npm config repository="https://github.com/Tmaxxrox97/eufy-security-ws" \
     && npm install --force @tmaxxrox97/eufy-security-ws@1.9.2-beta
 
 COPY run.sh /
