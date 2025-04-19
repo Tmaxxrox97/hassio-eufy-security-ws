@@ -19,7 +19,7 @@ jobs:
       - name: Replace tokens in the specified path
         uses: jonlabelle/replace-tokens-action@v1
         with:
-          paths: ./Dockerfile
+          paths: eufy-security-ws-test/
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish
