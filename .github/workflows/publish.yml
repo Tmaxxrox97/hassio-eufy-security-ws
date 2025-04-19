@@ -16,6 +16,12 @@ jobs:
         with:
           username: ${{ secrets.DOCKER_HUB_USERNAME }}
           password: ${{ secrets.DOCKER_HUB_TOKEN }}
+      - name: Replace tokens in the specified path
+        uses: jonlabelle/replace-tokens-action@v1
+        with:
+          paths: ./Dockerfile
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Publish
         uses: home-assistant/builder@master
         with:
@@ -23,7 +29,5 @@ jobs:
             --all \
             --target eufy-security-ws-test \
             --docker-hub tmaxxrox97 \
-        env:
-          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         #env:
         #  CAS_API_KEY: ${{ secrets.CAS_TOKEN }}
