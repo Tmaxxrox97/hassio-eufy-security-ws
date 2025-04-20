@@ -14,8 +14,7 @@ RUN \
     git \
     openssh-client \
     && npm config set @tmaxxrox97:registry=https://npm.pkg.github.com \
-    && npm install --force @tmaxxrox97/eufy-security-client@3.1.2-beta \
-    && npm install --force @tmaxxrox97/eufy-security-ws@1.9.2-beta
+    && npm install --force eufy-security-ws@npm:@tmaxxrox97/eufy-security-ws@1.9.2-beta
 
 COPY run.sh /
 RUN chmod a+x /run.sh
