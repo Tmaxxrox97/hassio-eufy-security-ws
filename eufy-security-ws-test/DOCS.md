@@ -40,7 +40,7 @@ stations:
 
 Starting with v17, [Node.js no longer orders IPv4 addresses before IPv6 addresses](https://nodejs.org/api/cli.html#--dns-result-orderorder) when resolving domain names. The endpoint used for push notifications (`firebaseinstallations.googleapis.com`) unfortunately resolves to a number of different IPv6 addresses that are not reachable from some connections.
 
-If you stop receiving push notifications (and are seeing `create push credentials error` messages in the log that repeat endlessly), try setting this to `true`--.
+If you stop receiving push notifications (and are seeing `create push credentials error` messages in the log that repeat endlessly), try setting this to `true`.
 
 ## Example configuration in YAML
 
